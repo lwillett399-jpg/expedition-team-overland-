@@ -399,7 +399,7 @@ input:focus-visible,
   justify-content: flex-end;
   gap: var(--space-2);
   padding-block: var(--space-1);
-  padding-left: 148px;
+  padding-left: 188px;
   min-height: 64px;
 }
 
@@ -417,8 +417,8 @@ input:focus-visible,
 
 .site-header__logo img {
   display: block;
-  width: 104px;
-  height: 104px;
+  width: 144px;
+  height: 144px;
 }
 
 .site-header__logo-text {
