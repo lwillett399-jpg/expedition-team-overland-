@@ -584,6 +584,19 @@ input:focus-visible,
   z-index: 1;
 }
 
+.hero__expedition-overlay {
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  z-index: -1;
+  width: max(1100px, 115vw);
+  max-width: none;
+  height: auto;
+  opacity: 0.82;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
 .hero__content {
   padding-block: var(--space-8) var(--space-6);
   max-width: 46rem;
@@ -626,6 +639,10 @@ input:focus-visible,
 
 @media (min-width: 768px) {
   .hero { min-height: 88vh; }
+  .hero__expedition-overlay {
+    top: 42%;
+    width: max(1500px, 108vw);
+  }
 }
 
 /* ==========================================================================
