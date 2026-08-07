@@ -606,7 +606,7 @@ input:focus-visible,
   pointer-events: none;
   /* Most of the graphic (mountains + route) sits inside the hero itself;
      only its lowest reach hangs past the boundary into the section below. */
-  transform: translateY(18%);
+  transform: translateY(34%);
 }
 
 .hero__content {
