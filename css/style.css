@@ -582,7 +582,7 @@ input:focus-visible,
   position: absolute;
   inset: 0;
   background: var(--color-overlay);
-  z-index: -1;
+  z-index: 1;
 }
 
 .hero__content {
