@@ -249,6 +249,13 @@ input:focus-visible,
   overflow: hidden;
 }
 
+/* Continue the hero's black fade a little further down so the green
+   background and topo texture don't reappear until past the route
+   graphic hanging over the boundary. */
+#featured-video {
+  background-image: linear-gradient(to bottom, var(--color-ink) 0%, var(--color-deep) 15%);
+}
+
 .section--deep .eyebrow,
 .section--deep p { color: rgba(255,255,255,0.82); }
 
@@ -581,15 +588,14 @@ input:focus-visible,
   content: '';
   position: absolute;
   inset: 0;
-  /* Fades to a fully opaque --color-deep at the very bottom so the hero
-     photo meets the next (dark green) section with no visible seam —
-     the route graphic just needs to roughly cross that zone, not align
-     to a pixel-perfect line. */
+  /* Fades to a fully opaque near-black at the very bottom so the hero
+     photo meets the next section with no visible seam and no green
+     bleeding through before the route graphic gets there. */
   background: linear-gradient(
     to bottom,
     var(--color-overlay) 0%,
     var(--color-overlay) 65%,
-    var(--color-deep) 100%
+    var(--color-ink) 100%
   );
   z-index: 1;
 }
