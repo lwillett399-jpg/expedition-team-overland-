@@ -586,15 +586,15 @@ input:focus-visible,
 
 .hero__expedition-overlay {
   position: absolute;
-  left: 50%;
+  left: 0;
   bottom: 0;
   z-index: 1;
-  width: clamp(620px, 80vw, 1200px);
+  width: 100vw;
   max-width: none;
   height: auto;
   opacity: 0.9;
   pointer-events: none;
-  transform: translate(-50%, 50%);
+  transform: translateY(50%);
 }
 
 .hero__content {
