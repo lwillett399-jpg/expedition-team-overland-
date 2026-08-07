@@ -69,9 +69,9 @@
   --color-border:       #DCDDD8;
   --color-overlay:      linear-gradient(
                           to top,
-                          rgba(20, 16, 14, 0.92) 0%,
-                          rgba(20, 16, 14, 0.62) 50%,
-                          rgba(20, 16, 14, 0.38) 100%
+                          rgba(20, 16, 14, 0.96) 0%,
+                          rgba(20, 16, 14, 0.78) 50%,
+                          rgba(20, 16, 14, 0.55) 100%
                         );
 
   /* Type */
