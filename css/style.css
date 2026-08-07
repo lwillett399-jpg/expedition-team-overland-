@@ -587,12 +587,12 @@ input:focus-visible,
 .hero__expedition-overlay {
   position: absolute;
   left: 50%;
-  top: 43%;
+  top: 18%;
   z-index: -1;
-  width: max(1100px, 115vw);
+  width: clamp(620px, 80vw, 1200px);
   max-width: none;
   height: auto;
-  opacity: 0.82;
+  opacity: 0.9;
   pointer-events: none;
   transform: translate(-50%, -50%);
 }
@@ -640,8 +640,7 @@ input:focus-visible,
 @media (min-width: 768px) {
   .hero { min-height: 88vh; }
   .hero__expedition-overlay {
-    top: 42%;
-    width: max(1500px, 108vw);
+    top: 16%;
   }
 }
 
