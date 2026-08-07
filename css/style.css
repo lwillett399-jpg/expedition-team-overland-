@@ -782,24 +782,6 @@ input:focus-visible,
   z-index: 1;
 }
 
-.builds-section {
-  overflow: visible;
-  z-index: 1;
-}
-
-.section-boundary-overlay {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 2;
-  width: 100vw;
-  max-width: none;
-  height: auto;
-  opacity: 0.9;
-  pointer-events: none;
-  transform: translateY(50%);
-}
-
 @media (min-width: 768px) {
   .builds-feature { grid-template-columns: 1fr 1fr; gap: var(--space-8); }
 }
@@ -839,13 +821,25 @@ input:focus-visible,
    ========================================================================== */
 .trips-strip {
   position: relative;
-  min-height: 40vh;
+  min-height: clamp(38rem, 72vh, 52rem);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: var(--color-surface);
   overflow: hidden;
+}
+
+.trips-strip__overlay {
+  position: relative;
+  z-index: 2;
+  width: 100vw;
+  max-width: none;
+  height: auto;
+  margin-bottom: clamp(-3rem, -4vw, -1.5rem);
+  opacity: 0.9;
+  pointer-events: none;
 }
 
 .trips-strip__media {
