@@ -67,12 +67,7 @@
   --color-surface-alt:  #F4F5F2;
   --color-deep:         #1B2A20;
   --color-border:       #DCDDD8;
-  --color-overlay:      linear-gradient(
-                          to top,
-                          rgba(20, 16, 14, 0.96) 0%,
-                          rgba(20, 16, 14, 0.78) 50%,
-                          rgba(20, 16, 14, 0.55) 100%
-                        );
+  --color-overlay:      rgba(20, 16, 14, 0.5);
 
   /* Type */
   --font-display: 'Saira', 'Arial Narrow', sans-serif;
