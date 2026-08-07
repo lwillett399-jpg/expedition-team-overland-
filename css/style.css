@@ -560,7 +560,7 @@ input:focus-visible,
   display: flex;
   align-items: flex-end;
   color: var(--color-surface);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero__media {
@@ -587,17 +587,19 @@ input:focus-visible,
 .hero__expedition-overlay {
   position: absolute;
   left: 50%;
-  top: 18%;
-  z-index: -1;
+  bottom: 0;
+  z-index: 1;
   width: clamp(620px, 80vw, 1200px);
   max-width: none;
   height: auto;
   opacity: 0.9;
   pointer-events: none;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
 }
 
 .hero__content {
+  position: relative;
+  z-index: 2;
   padding-block: var(--space-8) var(--space-6);
   max-width: 46rem;
 }
@@ -639,9 +641,6 @@ input:focus-visible,
 
 @media (min-width: 768px) {
   .hero { min-height: 88vh; }
-  .hero__expedition-overlay {
-    top: 16%;
-  }
 }
 
 /* ==========================================================================
@@ -655,6 +654,10 @@ input:focus-visible,
   aspect-ratio: 16 / 9;
   background: #000;
   box-shadow: var(--shadow-lifted);
+}
+
+#featured-video {
+  padding-top: clamp(9rem, 14vw, 13rem);
 }
 
 .featured-video__frame iframe {
