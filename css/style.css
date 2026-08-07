@@ -398,12 +398,13 @@ input:focus-visible,
   justify-content: flex-end;
   gap: var(--space-2);
   padding-block: var(--space-1);
-  padding-left: 220px;
+  padding-left: clamp(144px, 23vw, 200px);
   min-height: 64px;
 }
 
 /* Badge overlaps the header's bottom edge and hangs into the hero below,
-   like xoverland.com's logo treatment. */
+   like xoverland.com's logo treatment. It scales down fluidly on narrow
+   viewports instead of staying fixed size. */
 .site-header__logo {
   position: absolute;
   left: var(--space-3);
@@ -416,8 +417,9 @@ input:focus-visible,
 
 .site-header__logo img {
   display: block;
-  width: 176px;
-  height: 176px;
+  width: clamp(120px, 20vw, 176px);
+  aspect-ratio: 1 / 1;
+  height: auto;
 }
 
 .site-header__logo-text {
