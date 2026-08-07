@@ -581,7 +581,16 @@ input:focus-visible,
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--color-overlay);
+  /* Fades to a fully opaque --color-deep at the very bottom so the hero
+     photo meets the next (dark green) section with no visible seam —
+     the route graphic just needs to roughly cross that zone, not align
+     to a pixel-perfect line. */
+  background: linear-gradient(
+    to bottom,
+    var(--color-overlay) 0%,
+    var(--color-overlay) 65%,
+    var(--color-deep) 100%
+  );
   z-index: 1;
 }
 
@@ -595,7 +604,9 @@ input:focus-visible,
   height: auto;
   opacity: 0.9;
   pointer-events: none;
-  transform: translateY(50%);
+  /* Most of the graphic (mountains + route) sits inside the hero itself;
+     only its lowest reach hangs past the boundary into the section below. */
+  transform: translateY(18%);
 }
 
 .hero__content {
@@ -831,17 +842,6 @@ input:focus-visible,
   text-align: center;
   color: var(--color-surface);
   overflow: hidden;
-}
-
-.trips-strip__overlay {
-  position: relative;
-  z-index: 2;
-  width: 100vw;
-  max-width: none;
-  height: auto;
-  margin-bottom: clamp(-3rem, -4vw, -1.5rem);
-  opacity: 0.9;
-  pointer-events: none;
 }
 
 .trips-strip__media {
