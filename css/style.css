@@ -256,6 +256,14 @@ input:focus-visible,
   background-image: linear-gradient(to bottom, var(--color-ink) 0%, var(--color-deep) 15%);
 }
 
+/* The texture div is inset -10%/120% sized, so its own fade needs a
+   later stop than the section background's to land at the same visual
+   height (roughly section-15% once the inset offset is accounted for). */
+#featured-video .contour-texture {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 22%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 22%);
+}
+
 .section--deep .eyebrow,
 .section--deep p { color: rgba(255,255,255,0.82); }
 
