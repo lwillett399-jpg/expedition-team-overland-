@@ -864,7 +864,8 @@ input:focus-visible,
   z-index: -2;
 }
 
-.trips-strip__media img {
+.trips-strip__media img,
+.trips-strip__media video {
   width: 100%;
   height: 100%;
   object-fit: cover;

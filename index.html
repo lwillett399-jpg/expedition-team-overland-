@@ -196,7 +196,14 @@
 
     <!-- 5. Trips strip -->
     <section class="trips-strip" aria-labelledby="trips-heading">
-      <div class="trips-strip__media placeholder" role="img" aria-label="Placeholder full-bleed photo — overland trail landscape" style="aspect-ratio:auto;height:100%;position:absolute;inset:0;border-radius:0;">Full-bleed photo</div>
+      <div class="trips-strip__media">
+        <video
+          autoplay muted loop playsinline
+          poster="images/route-bg-poster.jpg"
+          aria-hidden="true">
+          <source src="videos/route-bg.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="container trips-strip__content">
         <h2 id="trips-heading">Plan Your Next Route</h2>
         <p>Trail difficulty, water crossings, and camp spots — the real conditions from crews who ran it first.</p>
