@@ -806,7 +806,7 @@ input:focus-visible,
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--color-overlay);
+  background: rgba(20, 16, 14, 0.28);
   pointer-events: none;
 }
 
@@ -889,8 +889,8 @@ input:focus-visible,
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(20,16,14,0.62);
-  z-index: -1;
+  background: rgba(20,16,14,0.74);
+  z-index: 1;
 }
 
 .trips-strip__content {
