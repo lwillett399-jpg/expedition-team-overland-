@@ -22,6 +22,44 @@
   }
 
   /* --------------------------------------------------------------------
+     Builds nav dropdown
+     -------------------------------------------------------------------- */
+  var dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+  var dropdown = document.getElementById('builds-dropdown');
+
+  var closeDropdown = function () {
+    if (dropdownToggle && dropdown) {
+      dropdownToggle.setAttribute('aria-expanded', 'false');
+      dropdown.classList.remove('is-open');
+    }
+  };
+
+  if (dropdownToggle && dropdown) {
+    dropdownToggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      var isOpen = dropdownToggle.getAttribute('aria-expanded') === 'true';
+      if (isOpen) {
+        closeDropdown();
+      } else {
+        dropdownToggle.setAttribute('aria-expanded', 'true');
+        dropdown.classList.add('is-open');
+      }
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!event.target.closest('.has-dropdown')) {
+        closeDropdown();
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        closeDropdown();
+      }
+    });
+  }
+
+  /* --------------------------------------------------------------------
      Mobile nav toggle
      -------------------------------------------------------------------- */
   var navToggle = document.querySelector('.nav-toggle');
@@ -32,6 +70,7 @@
       navToggle.setAttribute('aria-expanded', 'false');
       primaryNav.classList.remove('is-open');
       document.body.style.overflow = '';
+      closeDropdown();
     };
 
     var openNav = function () {
