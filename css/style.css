@@ -1152,6 +1152,7 @@ input:focus-visible,
 .build-facts dd { margin: .2rem 0 0; font-weight: 600; font-size: var(--text-sm); }
 
 .build-break { min-height: 34rem; display: flex; align-items: flex-end; color: white; background: linear-gradient(rgba(15,20,16,.2),rgba(15,20,16,.75)), url('../images/gladiator-gallery-2.jpg') center 57%/cover; }
+.build-break--wrangler-2002 { background-image: linear-gradient(rgba(15,20,16,.2),rgba(15,20,16,.75)), url('../images/wrangler-2002-gallery-3.jpg'); }
 .build-break .container { padding-block: var(--space-6); }
 .build-break p { font-family: var(--font-display); text-transform: uppercase; font-size: clamp(1.8rem,4vw,3.5rem); line-height: 1.12; }
 .build-break strong { color: #efb96f; }
