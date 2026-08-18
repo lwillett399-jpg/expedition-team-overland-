@@ -34,17 +34,48 @@
   <header class="site-header">
     <div class="container site-header__row">
       <a href="index.html" class="site-header__logo" aria-label="Expedition Team Overland home">
-        <img src="images/logo-badge.png" srcset="images/logo-badge.png 320w, images/logo-badge@2x.png 640w" sizes="176px" width="320" height="320" alt="Expedition Team Overland badge logo" loading="eager">
+        <img
+          src="images/logo-badge.png"
+          srcset="images/logo-badge.png 320w, images/logo-badge@2x.png 640w"
+          sizes="176px"
+          width="320" height="320"
+          alt="Expedition Team Overland badge logo featuring a mountain range and Jeep line art on a green topographic field"
+          loading="eager">
         <span class="site-header__logo-text">Expedition Team<span>Overland</span></span>
       </a>
-      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu"><span class="nav-toggle__bars"></span></button>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu">
+        <span class="nav-toggle__bars"></span>
+      </button>
+
       <nav class="primary-nav" id="primary-nav" aria-label="Primary">
         <ul class="primary-nav__list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="builds.html" aria-current="page">Builds</a></li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li class="has-dropdown">
+            <div class="nav-item-row">
+              <a href="2020-jeep-gladiator.html">Builds</a>
+              <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="builds-dropdown" aria-label="Show build pages">
+                <span class="nav-dropdown-toggle__arrow" aria-hidden="true"></span>
+              </button>
+            </div>
+            <ul class="nav-dropdown" id="builds-dropdown">
+              <li><a href="2020-jeep-gladiator.html">2020 Jeep Gladiator Rubicon</a></li>
+              <li><a href="2018-jeep-wrangler.html">2018 Jeep Wrangler Rubicon Recon</a></li>
+              <li><a href="2002-jeep-wrangler.html">2002 Jeep Wrangler Sahara</a></li>
+            </ul>
+          </li>
+          <li><a href="gear.html">Gear Reviews</a></li>
           <li><a href="trips.html">Trips</a></li>
-          <li><a href="https://www.expeditionteamoverland.com/browse/" target="_blank" rel="noopener noreferrer">Photography <span class="primary-nav__external" aria-hidden="true">&#8599;</span><span class="sr-only">(opens in new tab)</span></a></li>
-          <li><a href="https://expeditionteamoverland.wordpress.com/" target="_blank" rel="noopener noreferrer">Blog <span class="primary-nav__external" aria-hidden="true">&#8599;</span><span class="sr-only">(opens in new tab)</span></a></li>
+          <li>
+            <a href="https://www.expeditionteamoverland.com/browse/" target="_blank" rel="noopener noreferrer">
+              Photography <span class="primary-nav__external" aria-hidden="true">&#8599;</span><span class="sr-only">(opens in new tab)</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://expeditionteamoverland.wordpress.com/" target="_blank" rel="noopener noreferrer">
+              Blog <span class="primary-nav__external" aria-hidden="true">&#8599;</span><span class="sr-only">(opens in new tab)</span>
+            </a>
+          </li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
