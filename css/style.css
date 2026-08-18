@@ -657,8 +657,8 @@ input:focus-visible,
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   border: 1px solid rgba(255,255,255,0.4);
   border-radius: 50%;
   color: var(--color-surface);
