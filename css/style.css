@@ -574,7 +574,7 @@ input:focus-visible,
   position: relative;
   min-height: 72vh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   color: var(--color-surface);
   overflow: visible;
 }
@@ -628,8 +628,6 @@ input:focus-visible,
   z-index: 2;
   padding-block: var(--space-8) var(--space-6);
   max-width: 46rem;
-  margin-inline: auto;
-  text-align: center;
 }
 
 .hero__content h1 {
@@ -640,21 +638,18 @@ input:focus-visible,
 .hero__content p {
   font-size: var(--text-lg);
   max-width: 40ch;
-  margin-inline: auto;
   margin-bottom: var(--space-3);
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: var(--space-2);
   margin-bottom: var(--space-3);
 }
 
 .hero__social {
   display: flex;
-  justify-content: center;
   gap: var(--space-2);
 }
 
