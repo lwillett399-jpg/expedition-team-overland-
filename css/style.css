@@ -239,6 +239,12 @@ input:focus-visible,
   padding-block: var(--space-8);
 }
 
+/* Extra clearance for the first section on plain (non-hero) pages, so the
+   header logo's intentional overflow doesn't land on top of page content. */
+.section--page-top {
+  padding-top: 12rem;
+}
+
 .section--alt { background: var(--color-surface-alt); }
 
 .section--deep {
@@ -291,6 +297,34 @@ input:focus-visible,
   display: block;
   margin-bottom: var(--space-1);
 }
+
+/* ==========================================================================
+   Prose — long-form legal/policy body copy
+   ========================================================================== */
+.prose {
+  max-width: var(--width-prose);
+  margin-top: var(--space-6);
+}
+
+.prose h2 {
+  font-size: var(--text-xl);
+  margin-top: var(--space-6);
+}
+
+.prose h2:first-child { margin-top: 0; }
+
+.prose p { color: var(--color-ink-muted); }
+
+.prose ul {
+  list-style: disc;
+  padding-left: 1.4em;
+  margin: 0 0 var(--space-2);
+  color: var(--color-ink-muted);
+}
+
+.prose li { margin-bottom: var(--space-1); }
+
+.prose a { text-decoration: underline; text-underline-offset: 2px; }
 
 /* ==========================================================================
    Buttons
@@ -1326,7 +1360,6 @@ input:focus-visible,
 .about-hero__image { object-fit: cover; object-position: 76% 67%; }
 .about-hero__shade { background: linear-gradient(90deg,rgba(7,15,10,.6),rgba(7,15,10,.3) 52%,rgba(7,15,10,.04)),linear-gradient(0deg,rgba(7,15,10,.38),transparent 55%); }
 .about-hero__content { position: relative; z-index: 1; padding-block: clamp(5rem, 10vh, 7rem) 0; max-width: 48rem; }
-.about-hero__brand-mark { position: absolute; z-index: 1; left: var(--space-3); bottom: var(--space-3); width: clamp(6.5rem, 12vw, 10rem); height: auto; filter: drop-shadow(0 .3rem .8rem rgba(0,0,0,.28)); }
 .about-hero h1 { font-size: clamp(3.5rem,8vw,7rem); margin-bottom: var(--space-2); }
 .about-hero p { max-width: 42rem; font-size: clamp(1.05rem,2vw,1.35rem); color: rgba(255,255,255,.86); }
 .about-intro__grid,.about-family__grid { display: grid; gap: var(--space-4); }
@@ -1335,7 +1368,7 @@ input:focus-visible,
 .about-prose p:not(.about-lead) { color: var(--color-ink-muted); }
 .about-manifesto { position: relative; isolation: isolate; padding-block: var(--space-12); overflow: hidden; }
 .about-manifesto__grid { display: grid; align-items: center; gap: var(--space-4); }
-.about-manifesto__number { font-family: var(--font-display); font-size: clamp(7rem,22vw,18rem); line-height: .7; color: rgba(255,255,255,.045); margin: 0; }
+.about-manifesto__logo { width: min(100%, 24rem); height: auto; margin-inline: auto; filter: drop-shadow(0 .5rem 1.25rem rgba(0,0,0,.28)); }
 .about-manifesto blockquote { margin: var(--space-3) 0 0; font-family: var(--font-display); text-transform: uppercase; font-size: clamp(1.6rem,4vw,3.2rem); line-height: 1.16; }
 .about-manifesto blockquote strong { color: var(--color-accent); }
 .about-split__grid { display: grid; gap: var(--space-5); align-items: center; }
@@ -1368,7 +1401,6 @@ input:focus-visible,
 .btn--outline-light { color: white; border-color: rgba(255,255,255,.55); background: transparent; }
 @media (min-width: 800px) {
   .about-hero__content { margin-left: max(var(--space-3), calc((100vw - var(--width-content)) / 2 + var(--space-3))); margin-right: 0; }
-  .about-hero__brand-mark { left: max(var(--space-3), calc((100vw - var(--width-content)) / 2 + var(--space-3))); }
   .about-intro__grid { grid-template-columns: .75fr 1.35fr; gap: var(--space-8); }
   .about-manifesto__grid { grid-template-columns: .75fr 1.25fr; }
   .about-split__grid { grid-template-columns: 1.15fr 1fr; gap: var(--space-8); }

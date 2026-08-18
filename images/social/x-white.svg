@@ -1,4 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-labelledby="title">
   <title id="title">X</title>
-  <path fill="#fff" d="M18.9 3H22l-7.6 8.7L23 21h-6.9l-5.4-6.6L4.4 21H1.3l8.1-9.3L1 3h7l4.9 6.1L18.9 3Zm-1.2 16h1.9L7.4 5H5.4l12.3 14Z"/>
+  <g transform="translate(12 12) scale(0.72) translate(-12 -12)">
+    <path fill="#fff" d="M18.9 3H22l-7.6 8.7L23 21h-6.9l-5.4-6.6L4.4 21H1.3l8.1-9.3L1 3h7l4.9 6.1L18.9 3Zm-1.2 16h1.9L7.4 5H5.4l12.3 14Z"/>
+  </g>
 </svg>
