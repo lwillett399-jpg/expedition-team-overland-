@@ -4,21 +4,32 @@
   'use strict';
 
   /* --------------------------------------------------------------------
-     Sticky header shadow on scroll
+     Sticky header shadow on scroll, and a compact (smaller-logo) state
+     that engages scrolling down and releases scrolling up.
      -------------------------------------------------------------------- */
   var header = document.querySelector('.site-header');
 
   if (header) {
-    var toggleScrollShadow = function () {
-      if (window.scrollY > 4) {
-        header.classList.add('is-scrolled');
-      } else {
-        header.classList.remove('is-scrolled');
+    var lastScrollY = window.scrollY;
+
+    var toggleScrollState = function () {
+      var currentScrollY = window.scrollY;
+
+      header.classList.toggle('is-scrolled', currentScrollY > 4);
+
+      if (currentScrollY <= 4) {
+        header.classList.remove('is-compact');
+      } else if (currentScrollY > lastScrollY) {
+        header.classList.add('is-compact');
+      } else if (currentScrollY < lastScrollY) {
+        header.classList.remove('is-compact');
       }
+
+      lastScrollY = currentScrollY;
     };
 
-    toggleScrollShadow();
-    window.addEventListener('scroll', toggleScrollShadow, { passive: true });
+    toggleScrollState();
+    window.addEventListener('scroll', toggleScrollState, { passive: true });
   }
 
   /* --------------------------------------------------------------------
