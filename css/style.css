@@ -440,7 +440,7 @@ input:focus-visible,
 
 /* Shrinks slightly on scroll down, grows back on scroll up (see main.js) */
 .site-header.is-compact .site-header__logo img {
-  width: clamp(84px, 13vw, 110px);
+  width: clamp(100px, 15vw, 132px);
 }
 
 .site-header__logo-text {
@@ -597,6 +597,8 @@ input:focus-visible,
 
 @media (min-width: 900px) {
   .nav-toggle { display: none; }
+
+  .site-header__logo { left: 0; }
 
   .primary-nav {
     position: static;
@@ -1006,6 +1008,7 @@ input:focus-visible,
   gap: var(--space-4);
   align-items: center;
   justify-items: center;
+  margin-top: var(--space-4);
 }
 
 @media (min-width: 768px) {
@@ -1017,8 +1020,8 @@ input:focus-visible,
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 220px;
-  height: 84px;
+  max-width: 260px;
+  height: 108px;
   opacity: 0.9;
   transition: opacity var(--transition);
 }
@@ -1323,6 +1326,7 @@ input:focus-visible,
 .about-hero__image { object-fit: cover; object-position: 76% 67%; }
 .about-hero__shade { background: linear-gradient(90deg,rgba(7,15,10,.6),rgba(7,15,10,.3) 52%,rgba(7,15,10,.04)),linear-gradient(0deg,rgba(7,15,10,.38),transparent 55%); }
 .about-hero__content { position: relative; z-index: 1; padding-block: clamp(5rem, 10vh, 7rem) 0; max-width: 48rem; }
+.about-hero__brand-mark { position: absolute; z-index: 1; left: var(--space-3); bottom: var(--space-3); width: clamp(6.5rem, 12vw, 10rem); height: auto; filter: drop-shadow(0 .3rem .8rem rgba(0,0,0,.28)); }
 .about-hero h1 { font-size: clamp(3.5rem,8vw,7rem); margin-bottom: var(--space-2); }
 .about-hero p { max-width: 42rem; font-size: clamp(1.05rem,2vw,1.35rem); color: rgba(255,255,255,.86); }
 .about-intro__grid,.about-family__grid { display: grid; gap: var(--space-4); }
@@ -1364,6 +1368,7 @@ input:focus-visible,
 .btn--outline-light { color: white; border-color: rgba(255,255,255,.55); background: transparent; }
 @media (min-width: 800px) {
   .about-hero__content { margin-left: max(var(--space-3), calc((100vw - var(--width-content)) / 2 + var(--space-3))); margin-right: 0; }
+  .about-hero__brand-mark { left: max(var(--space-3), calc((100vw - var(--width-content)) / 2 + var(--space-3))); }
   .about-intro__grid { grid-template-columns: .75fr 1.35fr; gap: var(--space-8); }
   .about-manifesto__grid { grid-template-columns: .75fr 1.25fr; }
   .about-split__grid { grid-template-columns: 1.15fr 1fr; gap: var(--space-8); }
