@@ -535,6 +535,64 @@ input:focus-visible,
   color: var(--color-ink-muted);
 }
 
+/* Builds dropdown */
+.has-dropdown {
+  position: relative;
+}
+
+.nav-item-row {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item-row a {
+  flex: 1;
+}
+
+.nav-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-dropdown-toggle__arrow {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--color-ink);
+  border-bottom: 2px solid var(--color-ink);
+  transform: rotate(45deg);
+  transition: transform var(--transition);
+}
+
+.nav-dropdown-toggle[aria-expanded="true"] .nav-dropdown-toggle__arrow {
+  transform: rotate(225deg);
+}
+
+.nav-dropdown {
+  display: none;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-left: var(--space-3);
+}
+
+.nav-dropdown.is-open {
+  display: flex;
+}
+
+.nav-dropdown a {
+  font-size: var(--text-base);
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
 @media (min-width: 900px) {
   .nav-toggle { display: none; }
 
@@ -564,6 +622,39 @@ input:focus-visible,
   .primary-nav__list a:hover,
   .primary-nav__list a[aria-current="page"] {
     border-bottom-color: var(--color-brand);
+  }
+
+  .nav-item-row a { flex: none; }
+
+  .nav-dropdown-toggle { width: 24px; height: 24px; min-height: auto; }
+
+  .nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    margin-top: var(--space-1);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lifted);
+    padding: var(--space-1);
+    z-index: 10;
+  }
+
+  .nav-dropdown a {
+    min-height: 40px;
+    padding-inline: var(--space-2);
+    border-bottom: none;
+    color: var(--color-ink);
+    border-radius: var(--radius);
+  }
+
+  .nav-dropdown a:hover { background: var(--color-surface-alt); }
+
+  .has-dropdown:hover .nav-dropdown,
+  .has-dropdown:focus-within .nav-dropdown {
+    display: flex;
   }
 }
 
