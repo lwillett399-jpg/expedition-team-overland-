@@ -51,6 +51,10 @@
     });
   };
 
+  var HOVER_CLOSE_DELAY = 1000;
+  var canHover = window.matchMedia && window.matchMedia('(hover: hover)').matches;
+  var hoverCloseTimer = null;
+
   dropdownToggles.forEach(function (toggle) {
     var dropdown = document.getElementById(toggle.getAttribute('aria-controls'));
     if (!dropdown) {
@@ -59,6 +63,7 @@
 
     toggle.addEventListener('click', function (event) {
       event.stopPropagation();
+      window.clearTimeout(hoverCloseTimer);
       var isOpen = toggle.getAttribute('aria-expanded') === 'true';
       closeAllDropdowns();
       if (!isOpen) {
@@ -66,6 +71,26 @@
         dropdown.classList.add('is-open');
       }
     });
+
+    if (canHover) {
+      var navItem = toggle.closest('.has-dropdown');
+
+      if (navItem) {
+        navItem.addEventListener('mouseenter', function () {
+          window.clearTimeout(hoverCloseTimer);
+          closeAllDropdowns();
+          toggle.setAttribute('aria-expanded', 'true');
+          dropdown.classList.add('is-open');
+        });
+
+        navItem.addEventListener('mouseleave', function () {
+          window.clearTimeout(hoverCloseTimer);
+          hoverCloseTimer = window.setTimeout(function () {
+            closeDropdown(toggle, dropdown);
+          }, HOVER_CLOSE_DELAY);
+        });
+      }
+    }
   });
 
   if (dropdownToggles.length) {
