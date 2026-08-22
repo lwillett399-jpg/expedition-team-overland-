@@ -792,6 +792,11 @@ input:focus-visible,
 }
 .hero__social a:hover { background: rgba(255,255,255,0.15); }
 
+.hero__social img {
+  width: 30px;
+  height: 30px;
+}
+
 @media (min-width: 768px) {
   .hero { min-height: 88vh; }
 }
