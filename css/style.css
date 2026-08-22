@@ -1140,12 +1140,17 @@ input:focus-visible,
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgba(255,255,255,0.25);
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(255,255,255,0.4);
   border-radius: 50%;
 }
-.site-footer__social a:hover { background: rgba(255,255,255,0.1); }
+.site-footer__social a:hover { background: rgba(255,255,255,0.15); }
+
+.site-footer__social img {
+  width: 30px;
+  height: 30px;
+}
 
 .site-footer__bottom {
   border-top: 1px solid rgba(255,255,255,0.15);
